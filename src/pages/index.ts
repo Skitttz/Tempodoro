@@ -1,2 +1,2 @@
-export * from "./Home"
-export * from "./History"
+export * from "./Home/index"
+export * from "./History/index"
