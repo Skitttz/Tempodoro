@@ -19,4 +19,8 @@ export const MainContainer = styled.div`
       margin: 3rem 1rem 1rem 1rem;
       height: calc(100vh - 8rem);
     }
+
+  @media (max-width: 23rem){
+      margin: 3rem .5rem .5rem .5rem;
+    }
 `
