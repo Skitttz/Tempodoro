@@ -5,6 +5,7 @@ export enum ActionTypes{
   INTERRUPT_CURRENT_SESSION = 'INTERRUPT_CURRENT_SESSION',
   MARK_CURRENT_SESSION_FINISHED = 'MARK_CURRENT_SESSION_FINISHED',
   DELETE_SESSION = 'DELETE_SESSION',
+  CLEAR_SESSIONS = 'CLEAR_SESSIONS', 
 }
 
 export function addNewSessionAction(newSession : Session){
@@ -35,4 +36,10 @@ export function deleteSessionAction(sessionId: string){
       sessionId,
     }
   }
+}
+
+export function clearAllSessionsAction() {
+  return {
+    type: ActionTypes.CLEAR_SESSIONS,
+  };
 }

@@ -53,7 +53,15 @@ export function sessionsReducer(state: SessionState, action :any ){
     draft.sessions.splice(currencySessionIndex,1);
   })
   }
+
+  case ActionTypes.CLEAR_SESSIONS: { 
+      return {
+        sessions: [],
+        activeSessionId: null,
+      };
+  }
   default:
     return state;
   }
 }
+
