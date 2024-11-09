@@ -3,13 +3,11 @@ import { HeaderContainer } from './style';
 import Logo from '@assets/logo.svg';
 import { RoutesEnum } from 'src/routes/routes';
 import { IconStack2, IconClock, IconScriptX } from '@tabler/icons-react';
-import { deleteLocalStorage } from '@utils/deleteLocalStorage';
-import {
-  MessagesEnum,
-  TempodoroStorageKeysEnum,
-} from '@constants/generalConstants';
+import { MessagesEnum } from '@constants/generalConstants';
+import { useSessionContext } from '@contexts/SessionContext';
 
 export function Header() {
+  const { clearSessions } = useSessionContext();
   const handleDeleteStorage = (): void => {
     const confirmDelete = window.confirm(MessagesEnum.CONFIRM_DELETE_HISTORY);
     if (confirmDelete) {
@@ -17,7 +15,7 @@ export function Header() {
       if (datalist) {
         datalist.innerHTML = '';
       }
-      deleteLocalStorage(TempodoroStorageKeysEnum.SESSION_STATE);
+      clearSessions();
     }
   };
   return (
