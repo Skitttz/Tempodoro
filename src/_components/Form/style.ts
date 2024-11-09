@@ -10,6 +10,10 @@ export const FormContainer = styled.div`
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
+  @media (max-width: 67.5rem){
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
 `;
 
 
@@ -39,11 +43,17 @@ export const TaskInput = styled(DefaultInput)`
   flex: 1;
 
   &::-webkit-calendar-picker-indicator {
-    display: none !important;
+    display: none !important; 
+  }
+  @media (max-width:40rem){
+    max-width: 250px;
+    width: 100%;
+    flex: auto;
   }
 `
 
 export const MinutesInput = styled(DefaultInput)`
   width: 5rem;
   padding-left: 1rem;
+  @media (max-width:40rem){ width: 4rem}
 `

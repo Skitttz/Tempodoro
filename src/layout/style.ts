@@ -11,7 +11,12 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   
-  @media(max-width: 67.5rem){
-    padding: 0 16px;
+  @media (max-width: 67.5rem){
+    margin: 5rem 2rem;
   }
+
+  @media (max-width: 40rem){
+      margin: 3rem 1rem 1rem 1rem;
+      height: calc(100vh - 8rem);
+    }
 `

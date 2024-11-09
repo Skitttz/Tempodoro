@@ -8,6 +8,11 @@ export const HeaderContainer = styled.header`
   box-shadow: none;
   }   
 
+  @media (max-width: 67.5rem){
+      flex-direction: column;
+      gap: 1rem;
+    }
+
   nav {
     display: flex;
     gap: 0.5rem;
