@@ -6,11 +6,19 @@ export const HistoryContainer = styled.main`
   padding: 3.5rem;
   overflow-x: auto;
   
+  
   ${flexCenter({direction:"column", align:"stretch"})};
   h1{
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+
+  @media (max-width:40rem){
+      padding: 0;
+      margin-top: 1rem;
+      word-break: keep-all;
+      text-wrap: nowrap;
+    }
 `;
 
 export const HistoryList = styled.div`
@@ -22,6 +30,9 @@ export const HistoryList = styled.div`
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+    @media (max-width:40rem){
+      min-width: 200px;
+    }
 
     th{
       background-color: ${(props) => props.theme["history-header-background"]};

@@ -7,7 +7,7 @@ export const MainContainer = styled.div`
   padding: 2.5rem;
   background: ${props => props.theme['container-main']};
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   
