@@ -20,6 +20,7 @@ export interface ISessionContext {
   createNewSession: (data: ICreateSessionData) => void;
   interruptCurrentSession: () => void;
   deleteSession: (SessionId: string) => void;
+  clearSessions: () => void;
 }
 
 export interface Session{

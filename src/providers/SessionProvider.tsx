@@ -2,6 +2,7 @@ import { differenceInSeconds } from 'date-fns';
 import { useEffect, useReducer, useState } from 'react';
 import {
   addNewSessionAction,
+  clearAllSessionsAction,
   deleteSessionAction,
   interruptCurrentSessionAction,
   markCurrentSessionAsFinishedAction,
@@ -57,6 +58,11 @@ export function SessionProvider({ children }: ISessionContextProvider) {
     localStorage.setItem(TempodoroStorageKeysEnum.SESSION_STATE, stateJSON);
   }, [sessionsState]);
 
+  function clearSessions() {
+    localStorage.removeItem(TempodoroStorageKeysEnum.SESSION_STATE);
+    dispatch(clearAllSessionsAction());
+  }
+
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds);
   }
@@ -100,6 +106,7 @@ export function SessionProvider({ children }: ISessionContextProvider) {
         createNewSession,
         interruptCurrentSession,
         deleteSession,
+        clearSessions,
       }}
     >
       {children}
