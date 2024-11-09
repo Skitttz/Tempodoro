@@ -8,16 +8,18 @@ export const defaultTheme = {
   'gray-400': '#8D8D99',
   'gray-500': '#7C7C8A',
   'gray-600': '#323238',
+  'gray-650': '#504F4F',
   'gray-700': '#29292E',
   'gray-750': '#212121',
   'gray-800': '#202024',
   'gray-850': '#1c1c1c',
   'gray-900': '#121214',
 
-  'green': '#147804', // Button
-  'green-300': '#00B37E',
-  'green-500': '#00875F',
-  'green-700': '#015F43',
+  'green': '#147804',
+  'green-300': '#1AFF8E',
+  'green-500': '#00A84C',
+  'green-700': '#004D26',
+
 
   'red-500': '#AB222E',
   'red-700': '#7A1921',
