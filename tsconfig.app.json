@@ -9,6 +9,7 @@
     "paths": {
       "@components/*": ["src/_components/*"],
       "@pages/*": ["src/pages/*"],
+      "@reducers/*": ["src/reducers/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@providers/*": ["src/providers/*"],
       "@contexts/*": ["src/contexts/*"],
@@ -16,6 +17,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
+      "@constants/*": ["src/constants/*"]
     },
 
     /* Bundler mode */
