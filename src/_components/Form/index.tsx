@@ -29,7 +29,6 @@ export function FormSession() {
         id="minutesAmount"
         placeholder="00"
         aria-label="Campo para Definir Tempo da Tarefa"
-        step={5}
         min={5}
         max={60}
         disabled={!!activeSession}
