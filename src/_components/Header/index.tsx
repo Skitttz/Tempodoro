@@ -7,15 +7,18 @@ import { MessagesEnum } from '@constants/generalConstants';
 import { useSessionContext } from '@contexts/SessionContext';
 
 export function Header() {
-  const { clearSessions } = useSessionContext();
+  const { clearSessions, sessions } = useSessionContext();
+  const isEmptySessions = sessions.length === 0;
   const handleDeleteStorage = (): void => {
-    const confirmDelete = window.confirm(MessagesEnum.CONFIRM_DELETE_HISTORY);
-    if (confirmDelete) {
-      const datalist = document.getElementById('task-suggestions');
-      if (datalist) {
-        datalist.innerHTML = '';
+    if (!isEmptySessions) {
+      const confirmDelete = window.confirm(MessagesEnum.CONFIRM_DELETE_HISTORY);
+      if (confirmDelete) {
+        const datalist = document.getElementById('task-suggestions');
+        if (datalist) {
+          datalist.innerHTML = '';
+        }
+        clearSessions();
       }
-      clearSessions();
     }
   };
   return (
@@ -30,7 +33,10 @@ export function Header() {
         <NavLink to={RoutesEnum.History} title="Historico">
           <IconStack2 size={32} />
         </NavLink>
-        <a onClick={handleDeleteStorage}>
+        <a
+          onClick={handleDeleteStorage}
+          className={`${isEmptySessions ? 'disable' : ''}`}
+        >
           <IconScriptX size={32} />
         </a>
       </nav>

@@ -36,7 +36,14 @@ export const HeaderContainer = styled.header`
       &:focus{
         box-shadow: none;
       }
-
+      &.disable{
+        transition: all .4s;
+        cursor: not-allowed;
+        color: ${(props) => props.theme['gray-600']} 
+      }
+      &:hover.disable{
+        border-bottom: 3px solid transparent !important; 
+      }
       &.active{
         color: ${(props) => props.theme['green-500']};
       }
