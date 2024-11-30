@@ -8,7 +8,7 @@ export const SessionContext = createContext<ISessionContext | undefined>(
 export function useSessionContext(): ISessionContext {
   const context = useContext(SessionContext);
   if (!context) {
-    throw new Error('useContext must be used a SessionContext');
+    throw new Error('useSessionContext must be used a SessionProvider');
   }
   return context;
 }
